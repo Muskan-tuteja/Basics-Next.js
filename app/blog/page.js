@@ -24,12 +24,12 @@ export default async function BlogPage() {
       
 
       <h1>blog post</h1>
-      <div>
+      <div className="flex gap-8 flex-wrap">
         {posts.map((post) => {
           return (
-            <div key={post.id}>
+            <div key={post.id} className="border">
               <Link href={`/blog/${post.id}`}>
-                <h2>{post.title}</h2>
+                <h2 className="text-indigo-500">{post.title}</h2>
                 <p>{post.body}</p>
               </Link>
             </div>
